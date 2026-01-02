@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Engine</title>
+    <link rel="stylesheet" href="style.css"> <!-- For global resets and stars if needed -->
+    <link rel="stylesheet" href="dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Top Nav -->
+    <nav class="top-nav">
+        <div class="logo-small">
+            <i class='bx bxs-atom rotating-logo'></i> CHRONICS
+        </div>
+        <div class="user-profile">
+            <div class="status-indicator"></div>
+            <span class="user-email">chronic67@gmail.com</span>
+            <div class="avatar">C</div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Container -->
+    <div class="dashboard-container">
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">Human Health <span class="highlight">Monitor</span></h1>
+            <div class="pulse-line"></div>
+            <p class="hero-quote">
+                "Designed to understand, support, and improve human well-being."
+            </p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <!-- Card 1: System Load -->
+            <div class="stat-card">
+                <h3>System Load</h3>
+                <div class="stat-value" id="systemLoad">34%</div>
+                <div class="stat-graph"></div>
+            </div>
+
+            <!-- Card 2: Neural Stability -->
+            <div class="stat-card">
+                <h3>Neural Stability</h3>
+                <div class="stat-value highlight-text" id="neuralStability">98.2%</div>
+                <div class="stat-graph graph-2"></div>
+            </div>
+
+            <!-- Card 3: Active Nodes -->
+            <div class="stat-card">
+                <h3>Active Nodes</h3>
+                <div class="stat-value" id="activeNodes">4,102</div>
+                <div class="stat-graph graph-3"></div>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="upload-header">
+                <h2><i class='bx bxs-data'></i> MODEL_INPUT</h2>
+            </div>
+
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-content">
+                    <i class='bx bxs-cloud-upload upload-icon'></i>
+                    <h3>Initiate Data Ingestion</h3>
+                    <p>Drag & drop your input data here</p>
+                    <input type="file" id="fileInput" accept="application/pdf" hidden>
+                    <button class="btn-upload">Browse
+                        Files</button>
+                    <p id="fileInfo" class="file-text"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Background Stars / Particles if defined in style.css or dashboard.css -->
+    <div id="stars"></div>
+
+    <!-- Processing Modal -->
+    <div id="processingModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="loader-ring"></div>
+            <h2 class="processing-text">Processing your data</h2>
+            <p class="processing-subtext">Parsing Neural Patterns...</p>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

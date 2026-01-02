@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+
+            <!-- Left Side: Branding -->
+            <div class="login-left">
+                <div class="brand-header">
+                    <i class='bx bxs-chip'></i>
+                    <span>CHRONICS ENGINE</span>
+                </div>
+
+                <div class="welcome-text">
+                    <p class="small-text">Welcome to</p>
+                    <h1 class="gradient-text">Human AI</h1>
+                </div>
+
+                <!-- Pulse Lines Area (replaced Quote Box) -->
+                <div class="pulse-box">
+                    <div class="ecg-container">
+                        <div class="ecg-background-grid"></div>
+                        <!-- Use a path that mimics the reference: Flat -> Small Dip -> Spike Up -> Spike Down -> Flat -->
+                        <svg class="ecg-svg" viewBox="0 0 500 100" preserveAspectRatio="none">
+                            <path class="ecg-path" d="
+                                M0,50 L50,50 
+                                L60,45 L70,55 L80,50 
+                                L90,50 L100,20 L110,80 L120,50 
+                                L140,50 L150,40 L160,60 L170,50 
+                                L250,50
+                                M250,50 L300,50 
+                                L310,45 L320,55 L330,50 
+                                L340,50 L350,20 L360,80 L370,50 
+                                L390,50 L400,40 L410,60 L420,50 
+                                L500,50
+                            " />
+                            <circle class="ecg-dot" r="4" cx="0" cy="0">
+                                <animateMotion dur="2s" repeatCount="indefinite" path="
+                                        M0,50 L50,50 
+                                        L60,45 L70,55 L80,50 
+                                        L90,50 L100,20 L110,80 L120,50 
+                                        L140,50 L150,40 L160,60 L170,50 
+                                        L250,50
+                                        M250,50 L300,50 
+                                        L310,45 L320,55 L330,50 
+                                        L340,50 L350,20 L360,80 L370,50 
+                                        L390,50 L400,40 L410,60 L420,50 
+                                        L500,50
+                                    " />
+                            </circle>
+                        </svg>
+                        <div class="ecg-overlay"></div>
+                    </div>
+                    <p class="scanning-text">NEURAL SYNC ACTIVE</p>
+                </div>
+
+                <div class="tags-container">
+                    <span class="tag neural-tag"><i class='bx bx-hive'></i> Neural</span>
+                    <span class="tag alive-tag"><i class='bx bx-pulse'></i> Alive</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="login-right">
+                <div class="form-header">
+                    <h2>Initialize Session</h2>
+                    <p>Enter credentials to access the Core.</p>
+                    <p class="user-id-label">USER ID</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class='bx bx-user input-icon'></i>
+                        <input type="text" id="email" placeholder="agent@chronics.ai" required autocomplete="off">
+                    </div>
+
+                    <p class="input-label">ACCESS KEY</p>
+                    <div class="input-group">
+                        <i class='bx bx-key input-icon'></i>
+                        <input type="password" id="password" placeholder="........" required>
+                        <i class='bx bx-show eye-icon'></i>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Keep link active
+                        </label>
+                        <a href="#" class="forgot-link">Lost key?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        CONNECT <i class='bx bx-right-arrow-alt'></i>
+                    </button>
+
+                    <p id="errorMsg" class="error-message">Access restricted to authorized personnel only.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
